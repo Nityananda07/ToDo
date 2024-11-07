@@ -15,14 +15,13 @@ document.getElementById('addTaskBtn').addEventListener('click', function() {
 function createTaskElement(taskText) {
     const tr = document.createElement('tr');
 
-    // Calculate the task number based on the current number of tasks
     const taskNo = document.getElementById('taskList').children.length + 1;
 
     const tdNo = document.createElement('td');
-    tdNo.textContent = taskNo; // Shows the task number
+    tdNo.textContent = taskNo; 
 
     const tdTask = document.createElement('td');
-    tdTask.textContent = taskText; // Shows the task name
+    tdTask.textContent = taskText; 
 
     const tdAction = document.createElement('td');
 
@@ -31,15 +30,15 @@ function createTaskElement(taskText) {
     editBtn.addEventListener('click', function() {
         const newTaskText = prompt('Edit your task:', taskText);
         if (newTaskText !== null && newTaskText.trim() !== '') {
-            tdTask.textContent = newTaskText; // Update the task text
+            tdTask.textContent = newTaskText; 
         }
     });
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
     deleteBtn.addEventListener('click', function() {
-        tr.remove(); // Remove the task from the table
-        updateTaskNumbers(); // Update task numbers after deletion
+        tr.remove(); 
+        updateTaskNumbers(); 
     });
 
     tdAction.appendChild(editBtn);
@@ -57,6 +56,6 @@ function updateTaskNumbers() {
     const tasks = taskList.children;
 
     for (let i = 0; i < tasks.length; i++) {
-        tasks[i].children[0].textContent = i + 1; // Update task number
+        tasks[i].children[0].textContent = i + 1; 
     }
 }
