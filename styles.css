@@ -6,8 +6,8 @@ body {
 }
 
 .container {
-    width: 1000px;
-    margin: 50px auto;
+    width: 600px;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
@@ -68,10 +68,18 @@ td button:hover {
     background-color: #39c92c;
 }
 
-@media screen and (max-width: 600px)
-{
-    h1 {
-        font-size: 36px;
-        line-height: 50px;
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* Full width on small screens */
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    input[type="text"], button {
+        width: 100%; /* Full width for inputs and buttons */
+    }
+
+    th, td {
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
