@@ -67,3 +67,11 @@ td button {
 td button:hover {
     background-color: #39c92c;
 }
+
+@media screen and (max-width: 600px)
+{
+    h1 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+}
