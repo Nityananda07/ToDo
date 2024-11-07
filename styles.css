@@ -71,15 +71,16 @@ td button:hover {
 
 @media (max-width: 600px) {
     .container {
-        width: 100%; /* Full width on small screens */
-        padding: 10px; /* Less padding on small screens */
+        width: 100%; 
+        padding: 10px; 
+        text-align: center;
     }
 
     input[type="text"], button {
-        width: 100%; /* Full width for inputs and buttons */
+        width: 90%; 
     }
 
     th, td {
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px; 
     }
 }
